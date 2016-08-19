@@ -1,5 +1,7 @@
 package com.gitfeed;
 
+import android.os.Debug;
+
 import com.facebook.react.ReactActivity;
 import com.microsoft.codepush.react.CodePush;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -19,7 +21,11 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getJSBundleFile() {
-        return this._codePush.getBundleUrl("index.android.bundle");
+        if (BuildConfig.DEBUG){
+            return "http://10.101.70.19:8081/index.android.bundle?platform=android&dev=true";
+        }else{
+            return this._codePush.getBundleUrl("index.android.bundle");
+        }
     }
 
     @Override
