@@ -16,18 +16,18 @@ const JuheNewsComponent = React.createClass({
     handleReloadData(response){
       const body = response._bodyInit;
       const jsonResult = JSON.parse(body);
-      return jsonResult;
+      return jsonResult.result.data;
     },
 
     reloadPath(){
-      return JuheNewsService.requestJuheNewsDateFromNetwork("top");
+      return JuheNewsService.getJuheNewsUrl("top");
     },
 
     // 渲染listview的rowcellview
-    renderRow(rowData){
+    renderRow(rowData, sectionID, rowID, highlightRow){
       return(
         <Text style={styles.cellText}>
-          {rowData}
+          {rowData.title}
         </Text>
       )
     },
@@ -56,7 +56,7 @@ const JuheNewsComponent = React.createClass({
           reloadPromisePath = {this.reloadPath}
           handleReloadData = {this.handleReloadData}
           navigator = {this.props.navigator}
-          maxPage = {5}
+          maxPage = {1}
           contentInset = {{top: 64, left: 0, bottom: 49, right: 0}}
           contentOffset = {{x: 0, y: -64}}
           renderErrorPlaceholder = {this.renderErrorPlaceholder}
@@ -71,9 +71,6 @@ const JuheNewsComponent = React.createClass({
 
 var styles = StyleSheet.create({
   cellText: {
-    borderColor: 'lightGray',
-    borderWidth: 1,
-    borderRadius: 3,
     marginTop: 20,
     padding: 2,
   },

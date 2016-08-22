@@ -14,6 +14,11 @@ class JuheNewsService extends EventEmitter{
     super();
   }
 
+  getJuheNewsUrl(type){
+    let requestUrl = JuheNewsConfig.JUHE_NEWS_HOST + "?type=" + type + "&key=" + JuheNewsConfig.JUHE_NEWS_KEY;
+    return requestUrl;
+  }
+
   requestJuheNewsDateFromNetwork(type){
     let requestUrl = JuheNewsConfig.JUHE_NEWS_HOST + "?type=" + type + "&key=" + JuheNewsConfig.JUHE_NEWS_KEY;
     return (
