@@ -1,6 +1,5 @@
 const React = require('react-native');
 const Colors = require('../commonComponents/Colors');
-const config = require('../config');
 const CommonStyles = require('../commonComponents/CommonStyles');
 const CommonComponents = require('../commonComponents/CommonComponents');
 const GHService = require('../networkService/GithubServices')

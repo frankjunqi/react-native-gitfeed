@@ -114,8 +114,8 @@ const NavigationBarRouteMapper = {
     let title;
     switch (route.id) {
       // 聚合数据的路由route
-      case 'juhenews'
-        title = '聚合新闻';
+      case 'juhenews':
+        title = 'juhenews';
         break;
 
       case 'feed':
@@ -292,7 +292,7 @@ const routes = {
       // 聚合数据
       case 'juhenews':
         return <JuheNewsComponent navigator = {navigator} />;
-        
+
       case 'feed':
         return <FeedComponent navigator={navigator} tabLabel="Daily"/>;
       case 'user':

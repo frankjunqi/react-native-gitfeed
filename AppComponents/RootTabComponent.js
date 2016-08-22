@@ -69,10 +69,9 @@ const RootTabBar = React.createClass({
         </Icon.TabBarItem>
 
         <Icon.TabBarItem
-          title="JuheNews"
+          title="juhenews"
           iconName="ios-flame-outline"
           selectedIconName="ios-flame"
-          title={'juhenews'}
           selected={this.state.selectedTab === TABBABIDS[4]}
           onPress={() => {
             this.setState({
