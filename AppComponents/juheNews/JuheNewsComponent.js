@@ -44,7 +44,7 @@ const JuheNewsComponent = React.createClass({
                 />
               </TouchableOpacity>
             <Text style={styles.username}>{rowData.title}</Text>
-            <Text style={styles.username}>{rowData.type}+"--"+{rowData.realtype}+". Author: ["+{rowData.author_name}+"]"</Text>
+            <Text style={styles.createAt}>{rowData.type}+"--"+{rowData.realtype}+". Author: ["+{rowData.author_name}+"]"</Text>
             <Text style={styles.createAt}>{rowData.date}</Text>
             </View>
             {CommonComponents.renderSepLine()}
