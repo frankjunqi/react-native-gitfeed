@@ -24,10 +24,10 @@ const JuheNewsComponent = React.createClass({
     },
 
     // 渲染listview的rowcellview
-    renderRow(rowData){
+    renderRow(rowData, sectionID, rowID, highlightRow){
       return(
         <Text style={styles.cellText}>
-          {rowData}
+          {rowID}
         </Text>
       )
     },
