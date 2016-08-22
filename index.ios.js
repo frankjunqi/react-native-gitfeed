@@ -7,8 +7,6 @@ const OnboardComponent = require('./AppComponents/OnboardComponent');
 const LoginComponent = require('./AppComponents/LoginComponent');
 const codePush = require('react-native-code-push');
 
-// TEST TCSCENERYSEARCHLISTREQ
-const TCService = require('./networkService/TCSceneryService');
 
 const CODE_PUSH_STAGING_KEY = "YOUR_STAGING_KEY";
 const CODE_PUSH_PRODUCTION_KEY = "YOUR_PRODUCTION_KEY";
@@ -38,8 +36,6 @@ const GitFeedApp = React.createClass({
   },
 
   componentWillMount() {
-    // TEST HTTP Request About TC-SceneryscearchList
-    TCService.requestDateFromNetwork();
 
     GHService.queryLoginState()
       .then(value => {

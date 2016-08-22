@@ -7,6 +7,9 @@ const GHService = require('../networkService/GithubServices')
 const DXRNUtils = require('../commonComponents/DXRNUtils');
 const Platform = require('Platform');
 
+// TEST TCSCENERYSEARCHLISTREQ
+const TCService = require('../networkService/TCSceneryService');
+
 const {
   StyleSheet,
   ActivityIndicatorIOS,
@@ -28,6 +31,7 @@ const LoginComponent = React.createClass({
 
   getInitialState() {
     return {
+      
       username: GHService.currentUser().login,
       password: GHService.currentUser().password,
       logining: false,
@@ -48,6 +52,10 @@ const LoginComponent = React.createClass({
       logining: true,
       loginError: null,
     });
+
+    // TEST HTTP Request About TC-SceneryscearchList
+    TCService.requestDateFromNetwork();
+
     GHService.login(state.username, state.password)
       .then(() => {
         this.props.navigator && this.props.navigator.pop();

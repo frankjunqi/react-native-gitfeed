@@ -1,5 +1,5 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DF46A40B9B60921D4AE862B4F0204A61D7771F2E",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4A607C504C92ABD053F59A5EEE6D1BDFAD44ED9C",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
@@ -7,10 +7,11 @@
     "9883FB846A7CC983D6434ECB46AF628D7CB475D9" : 0,
     "A5C630BEAF976AD6D3403D984F28248B2E0DCDA5" : 0,
     "CD8DED7FBC7A2CC433DEBDF09BA04BB45A469A96" : 0,
-    "DF46A40B9B60921D4AE862B4F0204A61D7771F2E" : 0,
+    "9B17265964C6F0A263DC312AFB01C7DA39C938B2" : 0,
     "0FB01E741FABCBFEA20AFCEB795E49672110A676" : 0,
     "65ECC90CCB67D6C9650BCD7A49D61001919A9D6B" : 0,
-    "9B17265964C6F0A263DC312AFB01C7DA39C938B2" : 0,
+    "4A607C504C92ABD053F59A5EEE6D1BDFAD44ED9C" : 0,
+    "DF46A40B9B60921D4AE862B4F0204A61D7771F2E" : 0,
     "8660FA6A2A8FC89A89E3982B6BEBD64CF52B2E39" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2937C0EC-EB10-4E9B-89AB-3487796019A0",
@@ -18,10 +19,11 @@
     "9883FB846A7CC983D6434ECB46AF628D7CB475D9" : "GithubFeed-React-Native\/",
     "A5C630BEAF976AD6D3403D984F28248B2E0DCDA5" : "..\/Github\/DXPopover",
     "CD8DED7FBC7A2CC433DEBDF09BA04BB45A469A96" : "..\/Github\/Placeholder",
-    "DF46A40B9B60921D4AE862B4F0204A61D7771F2E" : "gitfeed\/",
+    "9B17265964C6F0A263DC312AFB01C7DA39C938B2" : "..\/Github\/DXPhotoBrowser",
     "0FB01E741FABCBFEA20AFCEB795E49672110A676" : "CNodejs-React-Native\/",
     "65ECC90CCB67D6C9650BCD7A49D61001919A9D6B" : "..\/Github\/DXPhotoBrowser-DXSimplePhoto",
-    "9B17265964C6F0A263DC312AFB01C7DA39C938B2" : "..\/Github\/DXPhotoBrowser",
+    "4A607C504C92ABD053F59A5EEE6D1BDFAD44ED9C" : "react-native-gitfeed\/",
+    "DF46A40B9B60921D4AE862B4F0204A61D7771F2E" : "gitfeed\/",
     "8660FA6A2A8FC89A89E3982B6BEBD64CF52B2E39" : "..\/Github\/DXRefresh"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "RN_CNNode",
@@ -32,6 +34,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.alibaba-inc.com:kaiwei.xkw\/CNodejs-React-Native.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0FB01E741FABCBFEA20AFCEB795E49672110A676"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/frankjunqi\/react-native-gitfeed.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4A607C504C92ABD053F59A5EEE6D1BDFAD44ED9C"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:xiekw2010\/DXPhotoBrowser-DXSimplePhoto.git",
