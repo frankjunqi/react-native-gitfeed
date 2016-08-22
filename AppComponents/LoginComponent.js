@@ -1,14 +1,11 @@
 const React = require('react-native');
 const Colors = require('../commonComponents/Colors');
-const Configs = require('../config');
+const   = require('../config');
 const CommonStyles = require('../commonComponents/CommonStyles');
 const CommonComponents = require('../commonComponents/CommonComponents');
 const GHService = require('../networkService/GithubServices')
 const DXRNUtils = require('../commonComponents/DXRNUtils');
 const Platform = require('Platform');
-
-// TEST TCSCENERYSEARCHLISTREQ
-const TCService = require('../networkService/TCSceneryService');
 
 const {
   StyleSheet,
@@ -31,7 +28,6 @@ const LoginComponent = React.createClass({
 
   getInitialState() {
     return {
-      
       username: GHService.currentUser().login,
       password: GHService.currentUser().password,
       logining: false,
@@ -52,9 +48,6 @@ const LoginComponent = React.createClass({
       logining: true,
       loginError: null,
     });
-
-    // TEST HTTP Request About TC-SceneryscearchList
-    TCService.requestDateFromNetwork();
 
     GHService.login(state.username, state.password)
       .then(() => {

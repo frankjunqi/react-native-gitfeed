@@ -22,7 +22,10 @@ const ExploreComponent = require('./ExploreComponent');
 const SearchComponent = require('./SearchComponent');
 const ShowCaseComponent = require('./ShowcaseComponent');
 const TrendsComponent = require('./TrendsComponent');
-const EditProfileComponent = require('./EditProfileComponent')
+const EditProfileComponent = require('./EditProfileComponent');
+
+// 聚合新闻new组件
+const JuheNewsComponent = require('./juheNews/JuheNewsComponent');
 
 const {
   Navigator,
@@ -110,6 +113,11 @@ const NavigationBarRouteMapper = {
   Title: function(route, navigator, index, navState) {
     let title;
     switch (route.id) {
+      // 聚合数据的路由route
+      case 'juhenews'
+        title = '聚合新闻';
+        break;
+
       case 'feed':
         title = 'Feed';
         break;
@@ -246,6 +254,12 @@ const routes = {
   _tabObjForRoute(routeName) {
     let tab = {tabName: 'Feed', iconName: 'ios-home'};
     switch (routeName) {
+
+      // 聚合数据tabicon
+      case 'juhenews':
+         tab = {tabName: 'juhenews',iconName: 'ios-flame'};
+        break;
+
       case 'feed':
         tab = {tabName: 'Feed', iconName: 'ios-home'};
         break;
@@ -274,6 +288,11 @@ const routes = {
     });
 
 		switch (route.id) {
+
+      // 聚合数据
+      case 'juhenews':
+        return <JuheNewsComponent navigator = {navigator} />;
+        
       case 'feed':
         return <FeedComponent navigator={navigator} tabLabel="Daily"/>;
       case 'user':

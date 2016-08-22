@@ -66,7 +66,8 @@ class TCSceneryService extends EventEmitter {
       }).then( value => {
 
       })
-    )}
+    )
+  }
 
 }
 const TCSingleService = new TCSceneryService();

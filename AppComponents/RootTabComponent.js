@@ -1,13 +1,12 @@
 const React = require('react-native');
 const Icon = require('react-native-vector-icons/Ionicons');
-const FeedComponent = require('./FeedComponent');
 const Routes = require('./Routes');
 const {
   NavigatorIOS,
   TabBarIOS
 } = React;
 
-const TABBABIDS = ['feed', 'watching', 'trend', 'personal'];
+const TABBABIDS = ['feed', 'watching', 'trend', 'personal','juhenews'];
 
 const RootTabBar = React.createClass({
   getInitialState: function() {
@@ -68,6 +67,21 @@ const RootTabBar = React.createClass({
           }}>
           {Routes.navigator('me')}
         </Icon.TabBarItem>
+
+        <Icon.TabBarItem
+          title="JuheNews"
+          iconName="ios-flame-outline"
+          selectedIconName="ios-flame"
+          title={'juhenews'}
+          selected={this.state.selectedTab === TABBABIDS[4]}
+          onPress={() => {
+            this.setState({
+              selectedTab: TABBABIDS[4],
+            });
+          }}>
+          {Routes.navigator('juhenews')}
+        </Icon.TabBarItem>
+
       </TabBarIOS>
     )
   },
