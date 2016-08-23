@@ -15,6 +15,7 @@ const {
 const FeedComponent = React.createClass({
   handleReloadData(response) {
     const body = response._bodyInit;
+    console.log('feedResponse: ' + body);
     const jsonResult = JSON.parse(body);
     return jsonResult;
   },

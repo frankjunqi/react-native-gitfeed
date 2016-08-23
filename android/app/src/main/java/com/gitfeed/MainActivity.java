@@ -1,13 +1,10 @@
 package com.gitfeed;
 
-import android.os.Debug;
-
 import com.facebook.react.ReactActivity;
 import com.microsoft.codepush.react.CodePush;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
-import com.microsoft.codepush.react.CodePush;
 
 import java.util.Arrays;
 import java.util.List;
@@ -21,11 +18,7 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getJSBundleFile() {
-        if (BuildConfig.DEBUG){
-            return "http://10.101.70.19:8081/index.android.bundle?platform=android&dev=true";
-        }else{
-            return this._codePush.getBundleUrl("index.android.bundle");
-        }
+        return this._codePush.getBundleUrl("index.android.bundle");
     }
 
     @Override
@@ -42,19 +35,19 @@ public class MainActivity extends ReactActivity {
         return BuildConfig.DEBUG;
     }
 
-   /**
-   * A list of packages used by the app. If the app uses additional views
-   * or modules besides the default ones, add more packages here.
-   */
-   @Override
-   protected List<ReactPackage> getPackages() {
-       // 4. Instantiate an instance of the CodePush runtime, using the right deployment key
-       this._codePush = new CodePush("YOUR_CODE_PUSH_KEY", this, BuildConfig.DEBUG);
+    /**
+     * A list of packages used by the app. If the app uses additional views
+     * or modules besides the default ones, add more packages here.
+     */
+    @Override
+    protected List<ReactPackage> getPackages() {
+        // 4. Instantiate an instance of the CodePush runtime, using the right deployment key
+        this._codePush = new CodePush("YOUR_CODE_PUSH_KEY", this, BuildConfig.DEBUG);
 
-       // 5. Add the CodePush package to the list of existing packages
-       return Arrays.<ReactPackage>asList(
-               new MainReactPackage(),
-               this._codePush.getReactPackage(),
-               new VectorIconsPackage());
-   }
+        // 5. Add the CodePush package to the list of existing packages
+        return Arrays.<ReactPackage>asList(
+                new MainReactPackage(),
+                this._codePush.getReactPackage(),
+                new VectorIconsPackage());
+    }
 }
