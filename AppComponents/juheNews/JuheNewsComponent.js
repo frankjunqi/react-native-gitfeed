@@ -3,8 +3,7 @@ const Colors = require('../../commonComponents/Colors');
 const JuheNewsService = require('../../networkService/juheNews/JuheNewsService');
 const GHRefreshListView = require('../GHRefreshListView');
 const Platform = require('Platform');
-const Colors = require('../../commonComponents/Colors');
-const CommonComponents = require('../commonComponents/CommonComponents');
+const CommonComponents = require('../../commonComponents/CommonComponents');
 
 const {
   View,
@@ -24,7 +23,7 @@ const JuheNewsComponent = React.createClass({
     },
 
     reloadPath(){
-      return JuheNewsService.getJuheNewsUrl("top");
+      return JuheNewsService.getJuheNewsUrl("junshi");
     },
 
     cellAction(){
@@ -37,15 +36,15 @@ const JuheNewsComponent = React.createClass({
         <TouchableHighlight underlayColor = {'lightGray'} onPress = {this.cellAction()}>
           <View style={styles.cellContentView}>
             <View style={styles.cellUp}>
-              <TouchableOpacity onPress={this.openAuthor}>
+              <TouchableOpacity>
                 <Image
-                  source={{uri: author.avatar_url}}
+                  source={{uri: rowData.thumbnail_pic_s}}
                   style={styles.avatar}
                 />
               </TouchableOpacity>
-            <Text style={styles.username}>{rowData.title}</Text>
-            <Text style={styles.createAt}>{rowData.type}+"--"+{rowData.realtype}+". Author: ["+{rowData.author_name}+"]"</Text>
-            <Text style={styles.createAt}>{rowData.date}</Text>
+              <Text numberOfLines = {2} style={styles.newsTitle}>{rowData.title}</Text>
+              <Text style={styles.subDesc}>{rowData.type}{rowData.realtype}{'. '}{rowData.author_name}</Text>
+              <Text style={styles.subDesc}>{rowData.date}</Text>
             </View>
             {CommonComponents.renderSepLine()}
           </View>
@@ -77,7 +76,7 @@ const JuheNewsComponent = React.createClass({
           reloadPromisePath = {this.reloadPath}
           handleReloadData = {this.handleReloadData}
           navigator = {this.props.navigator}
-          maxPage = {1}
+          maxPage = {10}
           contentInset = {{top: 64, left: 0, bottom: 49, right: 0}}
           contentOffset = {{x: 0, y: -64}}
           renderErrorPlaceholder = {this.renderErrorPlaceholder}
@@ -100,7 +99,7 @@ var styles = StyleSheet.create({
 
   cellUp: {
     margin: 10,
-    height: 40,
+    height: 80,
     flexDirection: 'column',
     flexWrap: 'wrap',
     alignItems: 'flex-start',
@@ -109,21 +108,22 @@ var styles = StyleSheet.create({
   },
 
   avatar: {
-    width: 40,
-    height: 40,
+    width: 70,
+    height: 70,
     backgroundColor: Colors.backGray
   },
 
-  username: {
+  newsTitle: {
     marginLeft: 10,
+    marginRight: 70,
     color: '#4078C0',
-    fontSize: 15,
+    fontSize: 14,
   },
 
-  createAt: {
+  subDesc: {
     marginLeft: 10,
     marginTop: 2,
-    fontSize: 12,
+    fontSize: 11,
     color: '#BFBFBF',
   },
 
@@ -131,6 +131,7 @@ var styles = StyleSheet.create({
     marginTop: 20,
     padding: 2,
   },
+
   errorCellText: {
     borderColor: 'lightGray',
     borderWidth: 1,

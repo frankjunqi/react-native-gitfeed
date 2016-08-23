@@ -115,7 +115,7 @@ const NavigationBarRouteMapper = {
     switch (route.id) {
       // 聚合数据的路由route
       case 'juhenews':
-        title = 'juhenews';
+        title = '聚合新闻';
         break;
 
       case 'feed':

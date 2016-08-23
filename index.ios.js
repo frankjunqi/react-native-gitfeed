@@ -41,9 +41,11 @@ const GitFeedApp = React.createClass({
       .then(value => {
         let lst = LoginState.pending;
         if (value.login.length > 0) {
-          lst = LoginState.onboard;
+          // TODO lst = LoginState.onboard;
+          lst = 1;
         } else {
-          lst = LoginState.unOnboard;
+          lst = 1;
+          //TODO lst = LoginState.unOnboard;
         }
 
         console.log('login userstate is: ' + JSON.stringify(lst));
