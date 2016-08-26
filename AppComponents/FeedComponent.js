@@ -4,6 +4,7 @@ const GHCell = require('./GHEventCell');
 const GHRefreshListView = require('./GHRefreshListView');
 const Platform = require('Platform');
 const Colors = require('../commonComponents/Colors');
+const ErrorPlaceholder = require('../commonComponents/ErrorPlacehoderComponent');
 
 const {
   View,
@@ -13,6 +14,7 @@ const {
 } = React;
 
 const FeedComponent = React.createClass({
+
   handleReloadData(response) {
     const body = response._bodyInit;
     console.log('feedResponse: ' + body);

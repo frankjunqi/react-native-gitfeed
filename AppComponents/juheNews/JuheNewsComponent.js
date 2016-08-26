@@ -4,6 +4,7 @@ const JuheNewsService = require('../../networkService/juheNews/JuheNewsService')
 const GHRefreshListView = require('../GHRefreshListView');
 const Platform = require('Platform');
 const CommonComponents = require('../../commonComponents/CommonComponents');
+const JuheCell = require('./JuheCell');
 
 const {
   View,
@@ -26,29 +27,10 @@ const JuheNewsComponent = React.createClass({
       return JuheNewsService.getJuheNewsUrl("junshi");
     },
 
-    cellAction(){
-      console.log("cell Action");
-    },
-
     // 渲染listview的rowcellview
     renderRow(rowData, sectionID, rowID, highlightRow){
       return(
-        <TouchableHighlight underlayColor = {'lightGray'} onPress = {this.cellAction()}>
-          <View style={styles.cellContentView}>
-            <View style={styles.cellUp}>
-              <TouchableOpacity>
-                <Image
-                  source={{uri: rowData.thumbnail_pic_s}}
-                  style={styles.avatar}
-                />
-              </TouchableOpacity>
-              <Text numberOfLines = {2} style={styles.newsTitle}>{rowData.title}</Text>
-              <Text style={styles.subDesc}>{rowData.type}{rowData.realtype}{'. '}{rowData.author_name}</Text>
-              <Text style={styles.subDesc}>{rowData.date}</Text>
-            </View>
-            {CommonComponents.renderSepLine()}
-          </View>
-        </TouchableHighlight>
+        <JuheCell key={rowID} juheCellEvent={rowData} navigator={this.props.navigator}/>
       )
     },
 
@@ -90,47 +72,6 @@ const JuheNewsComponent = React.createClass({
 );
 
 var styles = StyleSheet.create({
-  // Row Cell ContentView
-  cellContentView:{
-    flexDirection: 'column',
-    flex: 1,
-    alignItems: 'stretch',
-  },
-
-  cellUp: {
-    margin: 10,
-    height: 80,
-    flexDirection: 'column',
-    flexWrap: 'wrap',
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
-    marginBottom: 1,
-  },
-
-  avatar: {
-    width: 70,
-    height: 70,
-    backgroundColor: Colors.backGray
-  },
-
-  newsTitle: {
-    marginLeft: 10,
-    marginRight: 70,
-    color: '#4078C0',
-    fontSize: 14,
-  },
-
-  subDesc: {
-    marginLeft: 10,
-    marginTop: 2,
-    fontSize: 11,
-    color: '#BFBFBF',
-  },
-
-  cellText: {
-    marginTop: 20,
-    padding: 2,
-  },
 
   errorCellText: {
     borderColor: 'lightGray',
@@ -139,7 +80,7 @@ var styles = StyleSheet.create({
     marginTop: 20,
     padding: 2,
     backgroundColor: Colors.green,
-  }
+  },
 }
 );
 

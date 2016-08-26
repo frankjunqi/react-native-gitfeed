@@ -277,7 +277,9 @@ const GHCell = React.createClass({
         </View>
       )
     }
-
+    // MemberEvent 类型下的view or 非MemberEvent 类型下的view
+    // detail view CommonComponents view
+    // line view
     return (
       <TouchableHighlight underlayColor={'lightGray'} onPress={this.cellAction()}>
         <View style={styles.cellContentView}>
@@ -293,11 +295,11 @@ const GHCell = React.createClass({
             </Text>
             <Text style={styles.createAt}>{timesAgo}</Text>
           </View>
-          // MemberEvent 类型下的view or 非MemberEvent 类型下的view
+
           {textContainer}
-          // detail view CommonComponents view
+
           {this.detailComponentForEvent(ghEvent)}
-          // line view
+
           {CommonComponents.renderSepLine()}
         </View>
       </TouchableHighlight>
