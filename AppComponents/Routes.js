@@ -39,6 +39,7 @@ const {
 } = React;
 
 const NavigationBarRouteMapper = {
+  // 初始化 导航栏 左边按钮
   LeftButton: function(route, navigator, index, navState) {
     if (index === 0 || route.id === 'login') {
       return null;
@@ -66,9 +67,11 @@ const NavigationBarRouteMapper = {
     );
   },
 
+  // 初始化 导航栏 右边按钮
   RightButton: function(route, navigator, index, navState) {
     let rightButton;
     switch (route.id) {
+      // 初始化 导航栏 登陆页面的样式
       case 'login': {
         rightButton = (
           <TouchableOpacity onPress={() => navigator.pop()}>
@@ -79,6 +82,7 @@ const NavigationBarRouteMapper = {
         )
       }
         break;
+      // 初始化 导航栏 可编辑输入框的样式
       case 'editprofile':
         rightButton = (
             <TouchableOpacity onPress={route.pressSave}>
@@ -88,6 +92,7 @@ const NavigationBarRouteMapper = {
             </TouchableOpacity>
         )
         break;
+      // 初始化 导航栏 webview页面的样式
       case 'web':
         if (Platform.OS === 'ios') {
           rightButton = (
@@ -106,10 +111,10 @@ const NavigationBarRouteMapper = {
         break;
       default:
     }
-
     return rightButton;
   },
 
+  // 初始化 导航栏 title的文案&样式
   Title: function(route, navigator, index, navState) {
     let title;
     switch (route.id) {
@@ -117,7 +122,6 @@ const NavigationBarRouteMapper = {
       case 'juhenews':
         title = '聚合新闻';
         break;
-
       case 'feed':
         title = 'Feed';
         break;
@@ -226,7 +230,7 @@ const NavigationBarRouteMapper = {
     }
   },
 };
-
+// 初始化 routes 即： 导航栏
 const routes = {
 	navigator(initialRoute) {
 		return (
@@ -250,16 +254,14 @@ const routes = {
 			/>
 		);
 	},
-
+  // 底部tab栏目
   _tabObjForRoute(routeName) {
     let tab = {tabName: 'Feed', iconName: 'ios-home'};
     switch (routeName) {
-
       // 聚合数据tabicon
       case 'juhenews':
          tab = {tabName: 'juhenews',iconName: 'ios-flame'};
         break;
-
       case 'feed':
         tab = {tabName: 'Feed', iconName: 'ios-home'};
         break;
@@ -276,7 +278,7 @@ const routes = {
 
     return tab;
   },
-
+  // renderScene 表示 实际渲染的现实页面 & 页面切换的页面 & 切换的动画效果
 	renderScene(route, navigator) {
     DXRNUtils.trackClick('渲染现实的页面' + route.id);
     BackAndroid.addEventListener('hardwareBackPress', () => {
@@ -288,11 +290,9 @@ const routes = {
     });
 
 		switch (route.id) {
-
       // 聚合数据
       case 'juhenews':
         return <JuheNewsComponent navigator = {navigator} />;
-
       case 'feed':
         return <FeedComponent navigator={navigator} tabLabel="Daily"/>;
       case 'user':
@@ -313,7 +313,7 @@ const routes = {
             navigator={navigator}
             nextPromise={route.nextPromiseFunc}
             />
-        )
+        );
       case 'org':
         return <OrgComponent navigator={navigator} org={route.obj}/>;
       case 'me':
@@ -349,7 +349,7 @@ const routes = {
     return null;
 	}
 }
-
+// 样式表
 const styles = StyleSheet.create({
   messageText: {
     fontSize: 17,

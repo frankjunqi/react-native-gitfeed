@@ -1,4 +1,4 @@
-const config = require('../config');
+const config = require('./GHConfig');
 const {EventEmitter} = require('events');
 const React = require('react-native');
 const DXUtils = require('../commonComponents/DXRNUtils');

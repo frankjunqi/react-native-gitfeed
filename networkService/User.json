@@ -1,0 +1,44 @@
+GHService start user is:
+login userstate is: 1
+token header is: {"User-Agent":"GithubFeed","Accept":"application/vnd.github.v3+json"}
+
+{
+  "login":"frankjunqi",
+  "password":"",
+  "avatar":"https://avatars.githubusercontent.com/u/4297940?v=3",
+  "userId":4297940,
+  "url":"https://api.github.com/users/frankjunqi",
+  "tokenInfo":
+      {
+        "id":"",
+        "token":""
+      },
+  "id":4297940,
+  "avatar_url":"https://avatars.githubusercontent.com/u/4297940?v=3",
+  "gravatar_id":"",
+  "html_url":"https://github.com/frankjunqi",
+  "followers_url":"https://api.github.com/users/frankjunqi/followers",
+  "following_url":"https://api.github.com/users/frankjunqi/following{/other_user}",
+  "gists_url":"https://api.github.com/users/frankjunqi/gists{/gist_id}",
+  "starred_url":"https://api.github.com/users/frankjunqi/starred{/owner}{/repo}",
+  "subscriptions_url":"https://api.github.com/users/frankjunqi/subscriptions",
+  "organizations_url":"https://api.github.com/users/frankjunqi/orgs",
+  "repos_url":"https://api.github.com/users/frankjunqi/repos",
+  "events_url":"https://api.github.com/users/frankjunqi/events{/privacy}",
+  "received_events_url":"https://api.github.com/users/frankjunqi/received_events",
+  "type":"User",
+  "site_admin":false,
+  "name":"frank",
+  "company":null,
+  "blog":"https://github.com/frankjunqi",
+  "location":null,
+  "email":"frankjunqi@qq.com",
+  "hireable":true,
+  "bio":null,
+  "public_repos":90,
+  "public_gists":0,
+  "followers":19,
+  "following":64,
+  "created_at":"2013-04-30T02:05:35Z",
+  "updated_at":"2016-08-10T00:08:17Z"
+}

@@ -1,4 +1,4 @@
-var config = {
+var ghConfig = {
   "urlScheme": 'https:',
   "GithubClientId": 'YOUR_GITHUB_CLIENTID',
   'GithubClientSecret': 'YOUR_GITHUB_SECRET',
@@ -6,4 +6,4 @@ var config = {
   'userAgent': 'GithubFeed',
 }
 
-module.exports = config
+module.exports = ghConfig
