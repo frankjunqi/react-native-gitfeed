@@ -3,6 +3,7 @@ const Platform = require('Platform');
 
 const {
   DeviceEventEmitter,
+  // native 桥接module 
   NativeModules: {
     GFDiskCacheManager,
   }
@@ -13,7 +14,7 @@ const GFDiskCache = {
     if (Platform.OS === 'android') {
       // TODO:
 
-       
+
     } else if (Platform.OS === 'ios') {
       GFDiskCacheManager.diskCacheCost((size) => {
         console.log('get diskCacheCost', size);

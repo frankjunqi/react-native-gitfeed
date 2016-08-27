@@ -2,6 +2,7 @@ var React = require('react-native');
 const Platform = require('Platform');
 
 var {
+  // native 桥接module 
   NativeModules: {
     DXRNUtils,
   }

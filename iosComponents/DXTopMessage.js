@@ -7,6 +7,7 @@ const Platform = require('Platform');
 
 const {
   DeviceEventEmitter,
+  // native 桥接module 
   NativeModules: {
     DXTopMessageManager,
   }

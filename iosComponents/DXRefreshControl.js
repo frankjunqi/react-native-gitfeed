@@ -6,6 +6,7 @@
 var React = require('react-native');
 var {
   DeviceEventEmitter,
+  // native 桥接module 
   NativeModules: {
     DXRefreshControl,
   }
