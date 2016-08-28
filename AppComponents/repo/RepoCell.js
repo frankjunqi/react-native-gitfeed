@@ -14,6 +14,7 @@ const {
 const ICON_SIZE = 20;
 
 const GHCell = React.createClass({
+  // 组件属性
   propTypes: {
     ghEvent: React.PropTypes.object,
   },
