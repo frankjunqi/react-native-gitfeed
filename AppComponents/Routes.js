@@ -9,7 +9,7 @@ const DXRNUtils = require('../commonComponents/DXRNUtils');
 const NavigatorNavigationBarStyle = require('./GHNavigatorBarStyle.android');
 const Platform = require('Platform');
 
-const {UserComponent} = require('./UserComponent');
+const {UserComponent} = require('./user/UserComponent');
 const GHWebComponent = require('./GithubWebComponent');
 const UserListComponent = require('./user/UserListComponent');
 const FeedComponent = require('./feed/FeedComponent');

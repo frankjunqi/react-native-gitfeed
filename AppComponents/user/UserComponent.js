@@ -1,11 +1,10 @@
 const React = require('react-native');
-const GHService = require('../networkService/GithubServices');
-const CommonComponents = require('../commonComponents/CommonComponents');
+const GHService = require('../../networkService/GithubServices');
 const ScrollableTabView = require('react-native-scrollable-tab-view');
 const Icon = require('react-native-vector-icons/Ionicons');
-const Colors = require('../commonComponents/Colors');
-const RepoCell = require('./repo/RepoCell');
-const DXRNUtils = require('../commonComponents/DXRNUtils');
+const Colors = require('../../commonComponents/Colors');
+const RepoCell = require('../repo/RepoCell');
+const DXRNUtils = require('../../commonComponents/DXRNUtils');
 const Platform = require('Platform');
 
 const {
