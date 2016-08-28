@@ -2,7 +2,10 @@ const React = require('react-native');
 const CommonComponents = require('../commonComponents/CommonComponents');
 const Config = require('../networkService/GHConfig');
 const PropTypes = React.PropTypes;
+
+// 读取 LanguageList.json 文件中的list
 const Languages = require('../commonComponents/LanguageList');
+
 const Colors = require('../commonComponents/Colors');
 const DXRNUtils = require('../commonComponents/DXRNUtils');
 const Platform = require('Platform');
@@ -22,6 +25,7 @@ const LISTVIEWREF = 'listview';
 const CONTAINERREF = 'container';
 
 const FloorListView = React.createClass({
+  // 此组件涉及的属性 4个
   propTypes: {
     toggleOn: React.PropTypes.bool,
     languageList: React.PropTypes.array,
@@ -29,6 +33,7 @@ const FloorListView = React.createClass({
     currentLanguage: React.PropTypes.string,
   },
 
+  // 设置默认的属性的值，除func类型
   getDefaultProps() {
     return {
       languageList: Languages,
@@ -37,6 +42,7 @@ const FloorListView = React.createClass({
     }
   },
 
+  // 初始化此组件涉及到的 state的状态:  toggleon currentLanguage 这2个状态
   getInitialState() {
     return {
       toggleOn: this.props.toggleOn,
@@ -44,16 +50,17 @@ const FloorListView = React.createClass({
     }
   },
 
+  // 初始化此组件的，属性的func类型
   onSelectLanguage(selectedLanguage) {
     DXRNUtils.trackClick('clickLan', {name: 'Explore 打开语言选择'});
     if (this.state.currentLanguage == selectedLanguage) {
+      // 设置组件状态
       this.setState({
         toggleOn: false,
       });
-
       return;
     }
-
+    // 设置组件状态
     this.setState({
       toggleOn: false,
       currentLanguage: selectedLanguage,
@@ -61,6 +68,7 @@ const FloorListView = React.createClass({
     this.props.onSelectLanguage(selectedLanguage);
   },
 
+  // 状态改变 回进行render函数的执行，即：刷新页面，dom节点的更新
   render() {
     const languageList = this.props.languageList;
     const selectedLanguage = this.state.currentLanguage || languageList[0];
@@ -126,7 +134,9 @@ const FloorListView = React.createClass({
 
 const ICON_SIZE = 20;
 
+// languageList 中的cell的样式组件
 const LanguageCell = React.createClass({
+  // 2个属性
   propTypes: {
     name: React.PropTypes.string,
     onSelectCell: React.PropTypes.func,

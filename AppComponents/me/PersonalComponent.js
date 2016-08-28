@@ -1,10 +1,10 @@
 const React = require('react-native');
-const GHService = require('../networkService/GithubServices');
-const CommonComponents = require('../commonComponents/CommonComponents');
+const GHService = require('../../networkService/GithubServices');
+const CommonComponents = require('../../commonComponents/CommonComponents');
 const Icon = require('react-native-vector-icons/Ionicons');
-const Colors = require('../commonComponents/Colors');
-const SettingComponent = require('./SettingsCell');
-const DXRNUtils = require('../commonComponents/DXRNUtils');
+const Colors = require('../../commonComponents/Colors');
+const SettingsCell = require('../setting/SettingsCell');
+const DXRNUtils = require('../../commonComponents/DXRNUtils');
 const Platform = require('Platform');
 
 const {
@@ -94,13 +94,13 @@ const PersonComponent = React.createClass({
               color={Colors.textGray}/>
             </View>
         </TouchableHighlight>
-        <SettingComponent
+        <SettingsCell
           iconName={'ios-compose'}
           iconColor={Colors.blue}
           settingName={'Edit Profile'}
           onPress={this.onEditProfile}
           />
-        <SettingComponent
+        <SettingsCell
           onPress={() => this.props.navigator.push({id: 'settings'})}
           />
       </ScrollView>

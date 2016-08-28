@@ -1,10 +1,9 @@
 const React = require('react-native');
-const GHService = require('../networkService/GithubServices');
-const CommonComponents = require('../commonComponents/CommonComponents');
-const Colors = require('../commonComponents/Colors');
-const SettingComponent = require('./SettingsCell');
-const GFDiskCache = require('../iosComponents/GFDiskCache');
-const DXRNUtils = require('../commonComponents/DXRNUtils');
+const GHService = require('../../networkService/GithubServices');
+const Colors = require('../../commonComponents/Colors');
+const SettingsCell = require('./SettingsCell');
+const GFDiskCache = require('../../iosComponents/GFDiskCache');
+const DXRNUtils = require('../../commonComponents/DXRNUtils');
 const Platform = require('Platform');
 
 const {
@@ -145,7 +144,7 @@ const PersonComponent = React.createClass({
         contentInset={{top: 64, left: 0, bottom: 49, right: 0}}
         contentOffset={{x:0, y:-64}}
         >
-        <SettingComponent
+        <SettingsCell
           iconName={'ios-trash'}
           iconColor={Colors.blue}
           settingName={cachedSize}
@@ -154,19 +153,19 @@ const PersonComponent = React.createClass({
               cachedSize: size,
             });
           })}}/>
-        <SettingComponent
+        <SettingsCell
           iconName={'share'}
           iconColor={Colors.green}
           settingName={currentVersion}
           onPress={this.onShare}
           />
-        <SettingComponent
+        <SettingsCell
           iconName={'ios-star'}
           iconColor={'#FDCC4F'}
           settingName={'Give some advices'}
           onPress={this.onRate}
           />
-        <SettingComponent
+        <SettingsCell
           iconName={'university'}
           iconColor={Colors.purple}
           settingName={aboutUser}

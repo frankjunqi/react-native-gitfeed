@@ -1,17 +1,14 @@
 const React = require('react-native');
-const GHService = require('../networkService/GithubServices');
-const CommonComponents = require('../commonComponents/CommonComponents');
-const Colors = require('../commonComponents/Colors');
-const SettingComponent = require('./SettingsCell');
+const GHService = require('../../networkService/GithubServices');
+const Colors = require('../../commonComponents/Colors');
 const ScrollableTabView = require('react-native-scrollable-tab-view');
-const DefaultTabBar = require('./DefaultTabBar');
-const GHRefreshListView = require('./GHRefreshListView');
-const RepoCell = require('./RepoCell');
-const UserCell = require('./UserCell');
-const ErrorPlaceholder = require('../commonComponents/ErrorPlacehoderComponent');
-const LanguageComponent = require('./LanguageComponent');
-const ExploreCell = require('./ExploreCell');
-const DXRNUtils = require('../commonComponents/DXRNUtils');
+const DefaultTabBar = require('../DefaultTabBar');
+const GHRefreshListView = require('../GHRefreshListView');
+const UserCell = require('../user/UserCell');
+const ErrorPlaceholder = require('../../commonComponents/ErrorPlacehoderComponent');
+const LanguageComponent = require('../LanguageComponent');
+const ExploreCell = require('../explore/ExploreCell');
+const DXRNUtils = require('../../commonComponents/DXRNUtils');
 const Platform = require('Platform');
 
 const {
@@ -81,6 +78,7 @@ const SearchComponent = React.createClass({
     route.sp = this;
   },
 
+  // 释放组件 释放资源
   componentWillUnmount() {
     const route = this.props.route;
     route.sp = null;

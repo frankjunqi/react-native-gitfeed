@@ -6,7 +6,7 @@ const CommonComponents = require('./commonComponents/CommonComponents');
 const OnboardComponent = require('./AppComponents/OnboardComponent');
 const LoginComponent = require('./AppComponents/LoginComponent');
 const codePush = require('react-native-code-push');
-const FeedComponent = require('./AppComponents/FeedComponent');
+const FeedComponent = require('./AppComponents/feed/FeedComponent');
 
 const CODE_PUSH_PRODUCTION_KEY = "YOUR_PRODUCTION_KEY";
 

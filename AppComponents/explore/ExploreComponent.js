@@ -1,17 +1,13 @@
 const React = require('react-native');
-const GHService = require('../networkService/GithubServices');
-const CommonComponents = require('../commonComponents/CommonComponents');
 const ScrollableTabView = require('react-native-scrollable-tab-view');
-const Colors = require('../commonComponents/Colors');
-const DefaultTabBar = require('./DefaultTabBar');
-const GHRefreshListView = require('./GHRefreshListView');
-const RepoCell = require('./RepoCell');
-const UserCell = require('./UserCell');
-const LanguageComponent = require('./LanguageComponent');
-const TrendLanguages = require('../commonComponents/TrendLanguages.json');
-const ShowCasesComponent = require('./ShowCasesComponent');
+const Colors = require('../../commonComponents/Colors');
+const DefaultTabBar = require('../DefaultTabBar');
+const GHRefreshListView = require('../GHRefreshListView');
+const LanguageComponent = require('../LanguageComponent');
+const TrendLanguages = require('../../commonComponents/TrendLanguages.json');
+const ShowCasesComponent = require('../showcase/ShowCasesComponent');
 const ExploreCell = require('./ExploreCell');
-const DXRNUtils = require('../commonComponents/DXRNUtils');
+const DXRNUtils = require('../../commonComponents/DXRNUtils');
 const Platform = require('Platform');
 
 const {
@@ -96,6 +92,13 @@ const OrgComponent = React.createClass({
     if (Platform.OS == 'android') {
       paddingTop = 44;
     }
+
+    // explore 组件由4部分组成
+    // 1. showcase 左右滑动的广告；
+    // 2. 语言组件；
+    // 3. tabview 左右；
+    // 4. GHRefreshListView 组件；
+
     return (
       <View style={{backgroundColor: 'white', paddingTop: paddingTop, flex: 1}}>
         <ShowCasesComponent style={styles.showcase} navigator={this.props.navigator}/>

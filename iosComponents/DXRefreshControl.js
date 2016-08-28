@@ -5,8 +5,13 @@
 
 var React = require('react-native');
 var {
+
+  //keyboardWillShow, keyboardDidShow, keyboardWillHide, keyboardDidHide
+  //keyboardWillChangeFrame, keyboardDidChangeFrame
+  //add the listener
   DeviceEventEmitter,
-  // native 桥接module 
+  
+  // native 桥接module
   NativeModules: {
     DXRefreshControl,
   }

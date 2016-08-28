@@ -2,7 +2,6 @@ const React = require('react-native');
 const GHService = require('../networkService/GithubServices');
 const CommonComponents = require('../commonComponents/CommonComponents');
 const Colors = require('../commonComponents/Colors');
-const SettingComponent = require('../AppComponents/SettingsCell');
 const DXRNUtils = require('../commonComponents/DXRNUtils');
 
 const {

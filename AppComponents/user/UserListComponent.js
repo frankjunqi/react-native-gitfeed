@@ -1,26 +1,28 @@
 const React = require('react-native');
-const GHRefreshListView = require('./GHRefreshListView');
-const ExploreCell = require('./ExploreCell');
+const GHRefreshListView = require('../GHRefreshListView');
+const UserCell = require('./UserCell');
 const Platform = require('Platform');
 
-const RepoListComponent = React.createClass({
+const UserListComponent = React.createClass({
+  // UsetList组件属性
   PropTypes: {
-    repoListURL: React.PropTypes.string,
+    userListURL: React.PropTypes.string,
   },
 
   handleReloadData(response) {
     const body = response._bodyInit;
     const jsonResult = JSON.parse(body);
-
     return jsonResult;
   },
 
   reloadPath() {
-    return this.props.repoListURL;
+    return this.props.userListURL;
   },
 
   renderRow(rowData, sectionID, rowID, highlightRow) {
-    return <ExploreCell trendRepo={rowData} navigator={this.props.navigator}/>
+    return (
+      <UserCell key={rowID} user={rowData} navigator={this.props.navigator}/>
+    )
   },
 
   render() {
@@ -45,4 +47,4 @@ const RepoListComponent = React.createClass({
   },
 });
 
-module.exports = RepoListComponent;
+module.exports = UserListComponent;

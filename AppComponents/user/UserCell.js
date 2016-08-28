@@ -1,6 +1,5 @@
 const React = require('react-native');
-const Colors = require('../commonComponents/Colors');
-const CommonComponents = require('../commonComponents/CommonComponents');
+const Colors = require('../../commonComponents/Colors');
 
 const {
   StyleSheet,
@@ -10,12 +9,14 @@ const {
   TouchableHighlight,
 } = React;
 
-
+// 组建 Usercell
 const UserCell = React.createClass({
+  // 属性
   propTypes: {
     user: React.PropTypes.object,
   },
 
+  // 操作事件
   openTargetUser() {
     const user = this.props.user;
     const type = user.type;
@@ -26,9 +27,9 @@ const UserCell = React.createClass({
     }
   },
 
+  // 渲染
   render() {
     const user = this.props.user;
-
     return (
       <TouchableHighlight onPress={this.openTargetUser} underlayColor={'lightGray'}>
         <View style={styles.cellContentView}>
@@ -40,6 +41,7 @@ const UserCell = React.createClass({
   },
 });
 
+// 样式表
 const styles = StyleSheet.create({
   cellContentView: {
     flexDirection: 'row',
@@ -63,4 +65,4 @@ const styles = StyleSheet.create({
 
 });
 
-module.exports = UserCell
+module.exports = UserCell;

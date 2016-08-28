@@ -25,6 +25,9 @@ const LoginComponent = React.createClass({
     didLogin: React.PropTypes.func,
   },
 
+  // 初始化具体这个组件需要几个状态，只能初始化具体变量；
+  // 所以不能使用this.state  this.setState 等方法；
+  // 只能 returun 这个状态的 key value
   getInitialState() {
     return {
       username: GHService.currentUser().login,
@@ -81,10 +84,12 @@ const LoginComponent = React.createClass({
     });
   },
 
+  // 是否需要 update; return false || true ;
   shouldComponentUpdate(nextProps, nextState) {
     return this.state.logining != nextState.logining;
   },
 
+  // render 过程中 不能进行修改 this.setState
   render() {
     let signInCp;
     if (this.state.logining) {

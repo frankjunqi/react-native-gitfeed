@@ -11,16 +11,16 @@ const Platform = require('Platform');
 
 const {UserComponent} = require('./UserComponent');
 const GHWebComponent = require('./GithubWebComponent');
-const UserListComponent = require('./UserListComponent');
-const FeedComponent = require('./FeedComponent');
+const UserListComponent = require('./user/UserListComponent');
+const FeedComponent = require('./feed/FeedComponent');
 const LoginComponent = require('./LoginComponent');
 const OrgComponent = require('./OrgComponent');
-const PersonalComponent = require('./PersonalComponent');
-const SettingsComponent = require('./SettingsComponent');
-const RepoListComponent = require('./RepoListComponent');
-const ExploreComponent = require('./ExploreComponent');
-const SearchComponent = require('./SearchComponent');
-const ShowCaseComponent = require('./ShowcaseComponent');
+const PersonalComponent = require('./me/PersonalComponent');
+const SettingsComponent = require('./setting/SettingsComponent');
+const RepoListComponent = require('./repo/RepoListComponent');
+const ExploreComponent = require('./explore/ExploreComponent');
+const SearchComponent = require('./search/SearchComponent');
+const ShowCaseComponent = require('./showcase/ShowcaseComponent');
 const TrendsComponent = require('./TrendsComponent');
 const EditProfileComponent = require('./EditProfileComponent');
 

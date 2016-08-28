@@ -1,11 +1,10 @@
 const React = require('react-native');
-const GHService = require('../networkService/GithubServices');
-const CommonComponents = require('../commonComponents/CommonComponents');
-const Colors = require('../commonComponents/Colors');
-const GHRefreshListView = require('./GHRefreshListView');
-const ShowCaseComponent = require('./ShowCasesComponent');
-const ExploreCell = require('./ExploreCell');
-const DXRNUtils = require('../commonComponents/DXRNUtils');
+const GHService = require('../../networkService/GithubServices');
+const CommonComponents = require('../../commonComponents/CommonComponents');
+const Colors = require('../../commonComponents/Colors');
+const GHRefreshListView = require('../GHRefreshListView');
+const ExploreCell = require('../explore/ExploreCell');
+const DXRNUtils = require('../../commonComponents/DXRNUtils');
 const Platform = require('Platform');
 
 const {

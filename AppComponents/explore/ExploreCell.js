@@ -1,7 +1,7 @@
 const React = require('react-native');
-const CommonComponents = require('../commonComponents/CommonComponents');
+const CommonComponents = require('../../commonComponents/CommonComponents');
 const Icon = require('react-native-vector-icons/Ionicons');
-const Colors = require('../commonComponents/Colors');
+const Colors = require('../../commonComponents/Colors');
 const {
   View,
   ActivityIndicatorIOS,

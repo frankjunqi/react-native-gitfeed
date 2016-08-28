@@ -1,10 +1,10 @@
 const React = require('react-native');
-const CommonComponents = require('../commonComponents/CommonComponents');
-const Config = require('../networkService/GHConfig');
-const Languages = require('../commonComponents/LanguageList');
-const Colors = require('../commonComponents/Colors');
-const ErrorPlaceholder = require('../commonComponents/ErrorPlacehoderComponent');
-const DXRNUtils = require('../commonComponents/DXRNUtils');
+const CommonComponents = require('../../commonComponents/CommonComponents');
+const Config = require('../../networkService/GHConfig');
+const Languages = require('../../commonComponents/LanguageList');
+const Colors = require('../../commonComponents/Colors');
+const ErrorPlaceholder = require('../../commonComponents/ErrorPlacehoderComponent');
+const DXRNUtils = require('../../commonComponents/DXRNUtils');
 
 const {
   ListView,
@@ -98,7 +98,9 @@ const FloorListView = React.createClass({
     )
   },
 
+  // 状态的改变 会使得render进行重新走，所以控制好state，才有可能使得页面渲染性能好
   render() {
+    // state.loading 的状态
     if (this.state.loading) {
       return (
         <View style={{justifyContent: 'center', alignItems: 'center', height: 120}}>
@@ -107,6 +109,7 @@ const FloorListView = React.createClass({
       );
     }
 
+    // state.lastError 的状态
     if (this.state.lastError) {
       return (
         <ErrorPlaceholder
@@ -132,6 +135,7 @@ const FloorListView = React.createClass({
 
 const ICON_SIZE = 20;
 
+// showcasecell 的view
 const ShowcaseCell = React.createClass({
   propTypes: {
     showcase: React.PropTypes.object,

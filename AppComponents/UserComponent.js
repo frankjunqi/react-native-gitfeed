@@ -4,7 +4,7 @@ const CommonComponents = require('../commonComponents/CommonComponents');
 const ScrollableTabView = require('react-native-scrollable-tab-view');
 const Icon = require('react-native-vector-icons/Ionicons');
 const Colors = require('../commonComponents/Colors');
-const RepoCell = require('./RepoCell');
+const RepoCell = require('./repo/RepoCell');
 const DXRNUtils = require('../commonComponents/DXRNUtils');
 const Platform = require('Platform');
 
@@ -21,22 +21,21 @@ const {
   Navigator
 } = React;
 
- const ICON_SIZE = 18;
+const ICON_SIZE = 18;
 
 const UserComponent = React.createClass({
   _headerHeight: 0,
-
+  // 组件属性
   PropTypes: {
     user: React.PropTypes.object,
     userLoaded: false,
   },
-
+  // 获取默认状态
   getInitialState() {
     const dataSourceParam = {
       rowHasChanged: (row1, row2) => row1 !== row2,
       sectionHeaderHasChanged: (s1, s2) => s1 !== s2,
     }
-
     return {
       dataSource: new ListView.DataSource(dataSourceParam),
     };
@@ -58,7 +57,7 @@ const UserComponent = React.createClass({
         });
       })
   },
-
+  // 组件的header view信息
   renderHeader() {
     return (
       <AboutComponent
@@ -71,10 +70,12 @@ const UserComponent = React.createClass({
     )
   },
 
+  // 组件的listview 的cell信息
   renderRow(rowData, sectionID, rowID, highlightRow) {
     return <RepoCell repo={rowData} navigator={this.props.navigator}/>
   },
 
+  // 组件渲染
   render() {
     let idc;
     if (!this.state.userLoaded) {
@@ -109,7 +110,9 @@ const UserComponent = React.createClass({
   }
 });
 
+// 组件 header view组件：About组件
 const AboutComponent = React.createClass({
+  // 组件属性
   PropTypes: {
     /*
      * Just the simplest user
@@ -123,16 +126,19 @@ const AboutComponent = React.createClass({
     onLoadUser: React.PropTypes.func,
   },
 
+  // 获取默认状态
   getInitialState() {
     return {
       user: this.props.user,
     }
   },
 
+  // 事件邮件操作
   onPressEmail() {
     console.log('press email');
   },
 
+  // 事件blog操作
   onPressBlog() {
     const blog = {
       html: this.state.user.blog,
@@ -141,6 +147,7 @@ const AboutComponent = React.createClass({
     this.props.navigator.push({id: 'web', obj: blog});
   },
 
+  // 事件follow操作
   onFollow() {
     const action = this.state.user.isFollowing ? 'DELETE' : 'PUT';
     const followPromise = (() => {
@@ -160,6 +167,7 @@ const AboutComponent = React.createClass({
     DXRNUtils.trackClick('clickUserFollow', {name: '点击关不关注'});
   },
 
+  // 事件打开follows操作
   onOpenFollowers() {
     const url = this.state.user.followers_url;
     if (!url) return;
@@ -171,6 +179,7 @@ const AboutComponent = React.createClass({
     this.props.navigator.push({id: 'userList', obj: user});
   },
 
+  // 事件打开follow操作
   onOpenFollowing() {
     const url = this.state.user.url;
     if (!url) return;
@@ -182,6 +191,7 @@ const AboutComponent = React.createClass({
     this.props.navigator.push({id: 'userList', obj: user});
   },
 
+  // 事件打开startsrepos操作
   onOpenStarredRepos() {
     const username = this.state.user.login;
     /**
@@ -195,6 +205,7 @@ const AboutComponent = React.createClass({
     this.props.navigator.push({id: 'repos', obj: repo});
   },
 
+  // 事件打开组织操作
   renderOrg(org) {
     return (
       <TouchableOpacity onPress={() => {
@@ -205,6 +216,7 @@ const AboutComponent = React.createClass({
     )
   },
 
+  // 组件加载完成
   componentDidMount() {
     const user = this.props.user;
     GHService.fetchPromise(user.url)

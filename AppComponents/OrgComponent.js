@@ -6,8 +6,8 @@ const Icon = require('react-native-vector-icons/Ionicons');
 const Colors = require('../commonComponents/Colors');
 const DefaultTabBar = require('./DefaultTabBar');
 const GHRefreshListView = require('./GHRefreshListView');
-const RepoCell = require('./RepoCell');
-const UserCell = require('./UserCell');
+const RepoCell = require('./repo/RepoCell');
+const UserCell = require('./user/UserCell');
 const Platform = require('Platform');
 
 const {

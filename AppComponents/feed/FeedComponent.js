@@ -1,10 +1,10 @@
 const React = require('react-native');
-const GHService = require('../networkService/GithubServices');
+const GHService = require('../../networkService/GithubServices');
 const GHCell = require('./GHEventCell');
-const GHRefreshListView = require('./GHRefreshListView');
+const GHRefreshListView = require('../GHRefreshListView');
 const Platform = require('Platform');
-const Colors = require('../commonComponents/Colors');
-const ErrorPlaceholder = require('../commonComponents/ErrorPlacehoderComponent');
+const Colors = require('../../commonComponents/Colors');
+const ErrorPlaceholder = require('../../commonComponents/ErrorPlacehoderComponent');
 
 const {
   View,

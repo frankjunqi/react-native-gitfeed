@@ -2,14 +2,12 @@ const React = require('react-native');
 const GHService = require('../networkService/GithubServices');
 const CommonComponents = require('../commonComponents/CommonComponents');
 const Colors = require('../commonComponents/Colors');
-const SettingComponent = require('./SettingsCell');
 const ScrollableTabView = require('react-native-scrollable-tab-view');
 const DefaultTabBar = require('./DefaultTabBar');
 const GHRefreshListView = require('./GHRefreshListView');
-const UserCell = require('./UserCell');
+const UserCell = require('./user/UserCell');
 const ErrorPlaceholder = require('../commonComponents/ErrorPlacehoderComponent');
 const LanguageComponent = require('./LanguageComponent');
-const ExploreCell = require('./ExploreCell');
 const Countries = require('../commonComponents/Countries.json');
 const DXRNUtils = require('../commonComponents/DXRNUtils');
 const Languages = require('../commonComponents/LanguageList');
@@ -34,10 +32,12 @@ const LAN_PLACEHOLDER = 'Choose Language';
 const LAN_ALL_LANGUAGE = 'All Languages';
 let PLACE_DEFAULT = 'USA';
 
+// 搜索页面组件： 搜索框 & tab & listview
 const SearchComponent = React.createClass({
   _selectTab: 0,
   _lvs: [],
 
+  // 获取默认状态
   getInitialState() {
     let PLACE_DEFAULT = Countries[Math.floor(Math.random() * Countries.length)];
     return {
