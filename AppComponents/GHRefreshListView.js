@@ -22,7 +22,7 @@ const {
 const LISTVIEWREF = 'listview';
 const CONTAINERREF = 'container';
 
-const FloorListView = React.createClass({
+const GHRefreshListView = React.createClass({
   _dataSource: [],
   _page: 1,
   _maxPage: -1,
@@ -313,4 +313,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = FloorListView;
+module.exports = GHRefreshListView;

@@ -16,7 +16,7 @@ const {
 
 const ICON_SIZE = 30;
 
-const SettingsComponent = React.createClass({
+const SettingsCell = React.createClass({
   propTypes: {
     onPress: React.PropTypes.func,
     iconName: React.PropTypes.string,
@@ -95,4 +95,4 @@ var styles = StyleSheet.create({
   },
 });
 
-module.exports = SettingsComponent;
+module.exports = SettingsCell;

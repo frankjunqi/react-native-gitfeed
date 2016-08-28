@@ -253,4 +253,4 @@ const styles = StyleSheet.create({
   }
 });
 
-module.exports = LoginComponent
+module.exports = LoginComponent;

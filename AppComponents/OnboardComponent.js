@@ -187,4 +187,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = OnboardComponent
+module.exports = OnboardComponent;

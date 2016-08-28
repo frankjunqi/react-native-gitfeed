@@ -25,7 +25,7 @@ const {
 const ICON_SIZE = 12;
 const BASE_TRENDING_PATH = 'http://trending.codehub-app.com/v2/trending';
 
-const OrgComponent = React.createClass({
+const ExploreComponent = React.createClass({
   _selectTab: 0,
   _lvs: [],
 
@@ -173,4 +173,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = OrgComponent;
+module.exports = ExploreComponent;

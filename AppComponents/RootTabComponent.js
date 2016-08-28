@@ -8,7 +8,7 @@ const {
 
 const TABBABIDS = ['feed', 'watching', 'trend', 'personal','juhenews'];
 
-const RootTabBar = React.createClass({
+const RootTabComponent = React.createClass({
   getInitialState: function() {
     return {
       selectedTab: TABBABIDS[0],
@@ -86,4 +86,4 @@ const RootTabBar = React.createClass({
   },
 });
 
-module.exports = RootTabBar;
+module.exports = RootTabComponent;

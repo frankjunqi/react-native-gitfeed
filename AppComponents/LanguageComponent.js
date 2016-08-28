@@ -24,7 +24,7 @@ const {
 const LISTVIEWREF = 'listview';
 const CONTAINERREF = 'container';
 
-const FloorListView = React.createClass({
+const LanguageComponent = React.createClass({
   // 此组件涉及的属性 4个
   propTypes: {
     toggleOn: React.PropTypes.bool,
@@ -192,4 +192,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = FloorListView;
+module.exports = LanguageComponent;

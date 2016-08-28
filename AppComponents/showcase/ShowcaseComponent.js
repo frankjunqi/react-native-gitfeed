@@ -23,7 +23,7 @@ const ICON_SIZE = 12;
 
 const TREND_BASE_PATH = 'http://trending.codehub-app.com/v2/showcases/';
 
-const OrgComponent = React.createClass({
+const ShowcaseComponent = React.createClass({
   propTypes: {
     showcase: React.PropTypes.object,
   },
@@ -108,4 +108,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = OrgComponent;
+module.exports = ShowcaseComponent;

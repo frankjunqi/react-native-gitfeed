@@ -12,7 +12,7 @@ const {
   TouchableOpacity,
 } = React;
 
-const GHCell = React.createClass({
+const GHEventCell = React.createClass({
   // GHCell 属性的设置, 并且 属性需要的值是 object
   propTypes: {
     ghEvent: React.PropTypes.object,
@@ -371,4 +371,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = GHCell
+module.exports = GHEventCell;

@@ -19,7 +19,7 @@ const {
 
 const SHOW_CASE_PATH = 'http://trending.codehub-app.com/v2/showcases';
 
-const FloorListView = React.createClass({
+const ShowCasesComponent = React.createClass({
   getInitialState() {
     const dataSourceParam = {
       rowHasChanged: (row1, row2) => row1 !== row2,
@@ -192,4 +192,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = FloorListView;
+module.exports = ShowCasesComponent;

@@ -13,7 +13,7 @@ const {
 
 const ICON_SIZE = 20;
 
-const GHCell = React.createClass({
+const RepoCell = React.createClass({
   // 组件属性
   propTypes: {
     ghEvent: React.PropTypes.object,
@@ -185,4 +185,4 @@ const styles = StyleSheet.create({
   }
 });
 
-module.exports = GHCell
+module.exports = RepoCell;

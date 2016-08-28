@@ -33,7 +33,7 @@ const LAN_ALL_LANGUAGE = 'All Languages';
 let PLACE_DEFAULT = 'USA';
 
 // 搜索页面组件： 搜索框 & tab & listview
-const SearchComponent = React.createClass({
+const TrendsComponent = React.createClass({
   _selectTab: 0,
   _lvs: [],
 
@@ -203,4 +203,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = SearchComponent;
+module.exports = TrendsComponent;
