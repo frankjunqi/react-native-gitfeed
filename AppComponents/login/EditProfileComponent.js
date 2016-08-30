@@ -1,7 +1,7 @@
 const React = require('react-native');
-const GHService = require('../networkService/GithubServices')
+const GHService = require('../../networkService/GithubServices')
 const Icon = require('react-native-vector-icons/Ionicons');
-const Colors = require('../commonComponents/Colors');
+const Colors = require('../../commonComponents/Colors');
 const RCTUIManager = require('NativeModules').UIManager;
 
 const {

@@ -22,7 +22,7 @@ const ExploreComponent = require('./explore/ExploreComponent');
 const SearchComponent = require('./search/SearchComponent');
 const ShowCaseComponent = require('./showcase/ShowcaseComponent');
 const FamousComponent = require('./famous/FamousComponent');
-const EditProfileComponent = require('./EditProfileComponent');
+const EditProfileComponent = require('./login/EditProfileComponent');
 
 // 聚合新闻new组件
 const JuheNewsComponent = require('./juheNews/JuheNewsComponent');
