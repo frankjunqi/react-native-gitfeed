@@ -1,9 +1,8 @@
 const React = require('react-native');
 const Routes = require('./Routes');
-const MenuComponent = require('../AndroidComponents/RootMenuComponent');
-const OnboardComponent = require('./OnboardComponent');
+const OnboardComponent = require('./login/OnboardComponent');
 const ScrollableTabView = require('react-native-scrollable-tab-view');
-const TabBar = require('./TabBar.android');
+const TabBarAndroid = require('./TabBar.android');
 
 const {
   AppRegistry,
@@ -15,12 +14,14 @@ const {
   View,
 } = React;
 
-const UIExplorerApp = React.createClass({
+// 此组件针对android平台：root tab导航的组件
+
+const RootTabComponentAndroid = React.createClass({
   render() {
     return (
       <View style={{backgroundColor: 'white', flex: 1}}>
         <ScrollableTabView
-          renderTabBar={() => <TabBar />}
+          renderTabBar={() => <TabBarAndroid />}
           tabBarPosition={'bottom'}
           >
           {Routes.navigator('feed')}
@@ -43,4 +44,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = UIExplorerApp;
+module.exports = RootTabComponentAndroid;

@@ -26,6 +26,10 @@
  */
 'use strict';
 
+
+// navigator.NavigationBar 在android平台的时候；
+// 样式针对android平台设置： navigationStyles={NavigatorNavigationBarStyle
+
 var Dimensions = require('Dimensions');
 var Platform = require('Platform');
 

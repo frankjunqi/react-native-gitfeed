@@ -1,7 +1,7 @@
 const React = require('react-native');
 const Colors = require('../../commonComponents/Colors');
 const CommonComponents = require('../../commonComponents/CommonComponents');
-const DXRNUtils = require('../../commonComponents/DXRNUtils');
+const DXRNUtils = require('../../iosComponents/DXRNUtils');
 
 const {
   StyleSheet,

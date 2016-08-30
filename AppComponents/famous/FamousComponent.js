@@ -1,16 +1,16 @@
 const React = require('react-native');
-const GHService = require('../networkService/GithubServices');
-const CommonComponents = require('../commonComponents/CommonComponents');
-const Colors = require('../commonComponents/Colors');
+const GHService = require('../../networkService/GithubServices');
+const CommonComponents = require('../../commonComponents/CommonComponents');
+const Colors = require('../../commonComponents/Colors');
 const ScrollableTabView = require('react-native-scrollable-tab-view');
-const DefaultTabBar = require('./DefaultTabBar');
-const GHRefreshListView = require('./GHRefreshListView');
-const UserCell = require('./user/UserCell');
-const ErrorPlaceholder = require('../commonComponents/ErrorPlacehoderComponent');
-const LanguageComponent = require('./LanguageComponent');
-const Countries = require('../commonComponents/Countries.json');
-const DXRNUtils = require('../commonComponents/DXRNUtils');
-const Languages = require('../commonComponents/LanguageList');
+const DefaultTabBar = require('../DefaultTabBar');
+const GHRefreshListView = require('../GHRefreshListView');
+const UserCell = require('../user/UserCell');
+const ErrorPlaceholder = require('../../commonComponents/ErrorPlacehoderComponent');
+const PickerComponent = require('../picker/PickerComponent');
+const Countries = require('../../commonComponents/Countries.json');
+const DXRNUtils = require('../../iosComponents/DXRNUtils');
+const Languages = require('../../commonComponents/LanguageList');
 const Platform = require('Platform');
 
 const {
@@ -33,7 +33,7 @@ const LAN_ALL_LANGUAGE = 'All Languages';
 let PLACE_DEFAULT = 'USA';
 
 // 搜索页面组件： 搜索框 & tab & listview
-const TrendsComponent = React.createClass({
+const FamousComponent = React.createClass({
   _selectTab: 0,
   _lvs: [],
 
@@ -175,12 +175,12 @@ const TrendsComponent = React.createClass({
 
     return (
       <View style={[styles.container, {paddingTop: top}]}>
-        <LanguageComponent
+        <PickerComponent
           languageList={Countries}
           onSelectLanguage={this.onSelectPlace}
           currentLanguage={this.state.currentPlace}
         />
-        <LanguageComponent
+        <PickerComponent
           onSelectLanguage={this.onSelectLanguage}
           languageList={Languages}
         />
@@ -203,4 +203,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = TrendsComponent;
+module.exports = FamousComponent;

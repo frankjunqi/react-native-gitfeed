@@ -4,7 +4,7 @@ const Config = require('../../networkService/GHConfig');
 const Languages = require('../../commonComponents/LanguageList');
 const Colors = require('../../commonComponents/Colors');
 const ErrorPlaceholder = require('../../commonComponents/ErrorPlacehoderComponent');
-const DXRNUtils = require('../../commonComponents/DXRNUtils');
+const DXRNUtils = require('../../iosComponents/DXRNUtils');
 
 const {
   ListView,
@@ -104,7 +104,7 @@ const ShowCasesComponent = React.createClass({
     if (this.state.loading) {
       return (
         <View style={{justifyContent: 'center', alignItems: 'center', height: 120}}>
-          <ActivityIndicatorIOS size="large" />
+          <ActivityIndicatorIOS size="small" />
         </View>
       );
     }

@@ -1,9 +1,9 @@
 const React = require('react-native');
-const Colors = require('../commonComponents/Colors');
-const CommonStyles = require('../commonComponents/CommonStyles');
-const CommonComponents = require('../commonComponents/CommonComponents');
-const GHService = require('../networkService/GithubServices')
-const DXRNUtils = require('../commonComponents/DXRNUtils');
+const Colors = require('../../commonComponents/Colors');
+const CommonStyles = require('../../commonComponents/CommonStyles');
+const CommonComponents = require('../../commonComponents/CommonComponents');
+const GHService = require('../../networkService/GithubServices')
+const DXRNUtils = require('../../iosComponents/DXRNUtils');
 const Platform = require('Platform');
 
 const {
@@ -17,6 +17,8 @@ const {
 } = React;
 
 const WEBVIEWREF = 'webview';
+
+// 用户login登陆组件页面
 
 const LoginComponent = React.createClass({
   PropTypes: {

@@ -3,11 +3,11 @@ const ScrollableTabView = require('react-native-scrollable-tab-view');
 const Colors = require('../../commonComponents/Colors');
 const DefaultTabBar = require('../DefaultTabBar');
 const GHRefreshListView = require('../GHRefreshListView');
-const LanguageComponent = require('../LanguageComponent');
+const PickerComponent = require('../picker/PickerComponent');
 const TrendLanguages = require('../../commonComponents/TrendLanguages.json');
 const ShowCasesComponent = require('../showcase/ShowCasesComponent');
 const ExploreCell = require('./ExploreCell');
-const DXRNUtils = require('../../commonComponents/DXRNUtils');
+const DXRNUtils = require('../../iosComponents/DXRNUtils');
 const Platform = require('Platform');
 
 const {
@@ -102,7 +102,7 @@ const ExploreComponent = React.createClass({
     return (
       <View style={{backgroundColor: 'white', paddingTop: paddingTop, flex: 1}}>
         <ShowCasesComponent style={styles.showcase} navigator={this.props.navigator}/>
-        <LanguageComponent
+        <PickerComponent
           languageList={TrendLanguages}
           onSelectLanguage={this.onSelectLanguage}
         />

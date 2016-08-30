@@ -4,6 +4,7 @@ var React = require('react-native');
 const { requireNativeComponent } = require('react-native');
 const DXCategoryMenuManager = require('NativeModules').DXCategoryMenuManager;
 const EdgeInsetsPropType = require('EdgeInsetsPropType');
+const DXTextCategoryMenu  = requireNativeComponent('DXCategoryMenu', DXTextCategoryMenu);
 
 var CategoryTextMenu = React.createClass({
   propTypes: {
@@ -45,7 +46,5 @@ var CategoryTextMenu = React.createClass({
     )
   }
 });
-
-const DXTextCategoryMenu  = requireNativeComponent('DXCategoryMenu', DXTextCategoryMenu);
 
 module.exports = CategoryTextMenu;

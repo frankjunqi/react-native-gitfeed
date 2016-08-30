@@ -5,7 +5,7 @@ const Colors = require('../commonComponents/Colors');
 const GHService = require('../networkService/GithubServices');
 const Dimensions = require('Dimensions');
 const ScreenWidth = Dimensions.get('window').width;
-const DXRNUtils = require('../commonComponents/DXRNUtils');
+const DXRNUtils = require('../iosComponents/DXRNUtils');
 const NavigatorNavigationBarStyle = require('./GHNavigatorBarStyle.android');
 const Platform = require('Platform');
 
@@ -13,15 +13,15 @@ const {UserComponent} = require('./user/UserComponent');
 const GHWebComponent = require('./GithubWebComponent');
 const UserListComponent = require('./user/UserListComponent');
 const FeedComponent = require('./feed/FeedComponent');
-const LoginComponent = require('./LoginComponent');
-const OrgComponent = require('./OrgComponent');
+const LoginComponent = require('./login/LoginComponent');
+const OrgComponent = require('./org/OrgComponent');
 const PersonalComponent = require('./me/PersonalComponent');
 const SettingsComponent = require('./setting/SettingsComponent');
 const RepoListComponent = require('./repo/RepoListComponent');
 const ExploreComponent = require('./explore/ExploreComponent');
 const SearchComponent = require('./search/SearchComponent');
 const ShowCaseComponent = require('./showcase/ShowcaseComponent');
-const TrendsComponent = require('./TrendsComponent');
+const FamousComponent = require('./famous/FamousComponent');
 const EditProfileComponent = require('./EditProfileComponent');
 
 // 聚合新闻new组件
@@ -341,7 +341,7 @@ const routes = {
       case 'showcase':
         return <ShowCaseComponent navigator={navigator} showcase={route.obj}/>;
       case 'trend':
-        return <TrendsComponent navigator={navigator} tabLabel="Trend"/>;
+        return <FamousComponent navigator={navigator} tabLabel="Trend"/>;
       case 'editprofile':
         return <EditProfileComponent navigator={navigator} route={route}/>;
     }

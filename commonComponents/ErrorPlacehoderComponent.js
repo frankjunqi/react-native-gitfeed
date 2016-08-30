@@ -9,6 +9,7 @@ const {
   TouchableOpacity,
 } = React;
 
+// 公共view 错误页面
 const ErrorPlaceholder = React.createClass({
   propTypes: {
     title: React.PropTypes.string,

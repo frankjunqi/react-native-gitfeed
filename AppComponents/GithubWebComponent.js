@@ -3,7 +3,7 @@ const Icon = require('react-native-vector-icons/Ionicons');
 const Colors = require('../commonComponents/Colors');
 const GHService = require('../networkService/GithubServices');
 const UserList = require('./user/UserListComponent');
-const DXRNUtils = require('../commonComponents/DXRNUtils');
+const DXRNUtils = require('../iosComponents/DXRNUtils');
 const CommonComponents = require('../AppComponents/GithubWebComponent');
 const Platform = require('Platform');
 
@@ -131,7 +131,7 @@ const GithubWebComponent = React.createClass({
     } else if (Platform.OS === 'ios') {
       return (
         <View style={styles.container}>
-          <ActivityIndicatorIOS size="large" />
+          <ActivityIndicatorIOS size="small" />
         </View>
       );
     }

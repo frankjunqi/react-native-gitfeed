@@ -1,10 +1,10 @@
 const Routes = require('./AppComponents/Routes');
 const React = require('react-native');
-const RootTab = require('./AppComponents/RootTabComponent');
+const RootTab = require('./AppComponents/RootTabComponent.ios');
 const GHService = require('./networkService/GithubServices');
 const CommonComponents = require('./commonComponents/CommonComponents');
-const OnboardComponent = require('./AppComponents/OnboardComponent');
-const LoginComponent = require('./AppComponents/LoginComponent');
+const OnboardComponent = require('./AppComponents/login/OnboardComponent');
+const LoginComponent = require('./AppComponents/login/LoginComponent');
 const codePush = require('react-native-code-push');
 
 

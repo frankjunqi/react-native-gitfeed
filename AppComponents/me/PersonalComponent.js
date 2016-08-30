@@ -4,7 +4,7 @@ const CommonComponents = require('../../commonComponents/CommonComponents');
 const Icon = require('react-native-vector-icons/Ionicons');
 const Colors = require('../../commonComponents/Colors');
 const SettingsCell = require('../setting/SettingsCell');
-const DXRNUtils = require('../../commonComponents/DXRNUtils');
+const DXRNUtils = require('../../iosComponents/DXRNUtils');
 const Platform = require('Platform');
 
 const {

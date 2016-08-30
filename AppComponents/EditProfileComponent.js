@@ -30,6 +30,7 @@ const NOT_HIREABLE_NOTE = 'No, I\'m not hireable!';
 const HIREABLE_NOTE = 'Yes, I\'m hireable!';
 const DEFAULT_EMAIL_ADDRESS = 'Don\'t show my email address';
 
+// 输入框的组件
 const EditProfileComponent = React.createClass({
 
   //Input fields configurations.
@@ -37,6 +38,7 @@ const EditProfileComponent = React.createClass({
   _currentFocusedInputFieldId:'',
   _isKeyboardOpen:true,
 
+  // 初始化组件需要用到的state状态的初值
   getInitialState() {
     return {
       name:'Name',
@@ -52,6 +54,7 @@ const EditProfileComponent = React.createClass({
     };
   },
 
+  // render 前一个生命周期
   componentWillMount() {
     this._inputFieldConfig = [
       {
@@ -108,6 +111,7 @@ const EditProfileComponent = React.createClass({
     this.props.route.pressCancel = this.onPressCancel;
   },
 
+  // 输入框组件挂载完成
   componentDidMount(){
     let userInfo_url = GHService.apiPath() + '/user';
     let userEmail_url = GHService.apiPath() + '/user/emails';
@@ -157,7 +161,7 @@ const EditProfileComponent = React.createClass({
   //   DeviceEventEmitter.removeListener('keyboardWillHide');
   // },
 
-//-------Functions of buttons on navigationBar---------
+  //-------Functions of buttons on navigationBar---------
   onPressSave(){
     this.setState({doneLoading:false});
 
@@ -327,7 +331,7 @@ const EditProfileComponent = React.createClass({
     } else {
       return (
         <View style={styles.acitvityIndicatorContainer}>
-          <ActivityIndicatorIOS animating={true} size='large'/>
+          <ActivityIndicatorIOS animating={true} size='small'/>
         </View>
       );
     }

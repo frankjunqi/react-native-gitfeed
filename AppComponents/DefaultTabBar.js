@@ -10,27 +10,6 @@ var {
   Animated,
 } = React;
 
-
-var styles = StyleSheet.create({
-  tab: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingBottom: 2,
-  },
-
-  tabs: {
-    height: 40,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    borderWidth: 1,
-    borderTopWidth: 0,
-    borderLeftWidth: 0,
-    borderRightWidth: 0,
-    borderBottomColor: '#ccc',
-  },
-});
-
 var DefaultTabBar = React.createClass({
   propTypes: {
     goToPage: React.PropTypes.func,
@@ -77,6 +56,26 @@ var DefaultTabBar = React.createClass({
         <Animated.View style={[tabUnderlineStyle, {left}]} />
       </View>
     );
+  },
+});
+
+var styles = StyleSheet.create({
+  tab: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingBottom: 2,
+  },
+
+  tabs: {
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    borderWidth: 1,
+    borderTopWidth: 0,
+    borderLeftWidth: 0,
+    borderRightWidth: 0,
+    borderBottomColor: '#ccc',
   },
 });
 

@@ -6,9 +6,9 @@ const DefaultTabBar = require('../DefaultTabBar');
 const GHRefreshListView = require('../GHRefreshListView');
 const UserCell = require('../user/UserCell');
 const ErrorPlaceholder = require('../../commonComponents/ErrorPlacehoderComponent');
-const LanguageComponent = require('../LanguageComponent');
+const PickerComponent = require('../picker/PickerComponent');
 const ExploreCell = require('../explore/ExploreCell');
-const DXRNUtils = require('../../commonComponents/DXRNUtils');
+const DXRNUtils = require('../../iosComponents/DXRNUtils');
 const Platform = require('Platform');
 
 const {
@@ -193,7 +193,7 @@ const SearchComponent = React.createClass({
 
     return (
       <View style={[styles.container, {paddingTop: top}]}>
-        <LanguageComponent
+        <PickerComponent
           onSelectLanguage={this.onSelectLanguage}
           currentLanguage={this.state.currentLanguage}/>
         <ScrollableTabView

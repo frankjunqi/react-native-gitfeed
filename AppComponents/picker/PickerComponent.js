@@ -1,13 +1,13 @@
 const React = require('react-native');
-const CommonComponents = require('../commonComponents/CommonComponents');
-const Config = require('../networkService/GHConfig');
+const CommonComponents = require('../../commonComponents/CommonComponents');
+const Config = require('../../networkService/GHConfig');
 const PropTypes = React.PropTypes;
 
 // 读取 LanguageList.json 文件中的list
-const Languages = require('../commonComponents/LanguageList');
+const Languages = require('../../commonComponents/LanguageList');
 
-const Colors = require('../commonComponents/Colors');
-const DXRNUtils = require('../commonComponents/DXRNUtils');
+const Colors = require('../../commonComponents/Colors');
+const DXRNUtils = require('../../iosComponents/DXRNUtils');
 const Platform = require('Platform');
 
 const {
@@ -24,7 +24,7 @@ const {
 const LISTVIEWREF = 'listview';
 const CONTAINERREF = 'container';
 
-const LanguageComponent = React.createClass({
+const PickerComponent = React.createClass({
   // 此组件涉及的属性 4个
   propTypes: {
     toggleOn: React.PropTypes.bool,
@@ -192,4 +192,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = LanguageComponent;
+module.exports = PickerComponent;

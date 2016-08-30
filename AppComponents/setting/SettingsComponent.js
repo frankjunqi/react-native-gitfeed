@@ -3,7 +3,7 @@ const GHService = require('../../networkService/GithubServices');
 const Colors = require('../../commonComponents/Colors');
 const SettingsCell = require('./SettingsCell');
 const GFDiskCache = require('../../iosComponents/GFDiskCache');
-const DXRNUtils = require('../../commonComponents/DXRNUtils');
+const DXRNUtils = require('../../iosComponents/DXRNUtils');
 const Platform = require('Platform');
 
 const {

@@ -1,9 +1,9 @@
 const React = require('react-native');
-const Colors = require('../commonComponents/Colors');
-const Configs = require('../networkService/GHConfig');
-const CommonStyles = require('../commonComponents/CommonStyles');
-const CommonComponents = require('../commonComponents/CommonComponents');
-const GHService = require('../networkService/GithubServices')
+const Colors = require('../../commonComponents/Colors');
+const Configs = require('../../networkService/GHConfig');
+const CommonStyles = require('../../commonComponents/CommonStyles');
+const CommonComponents = require('../../commonComponents/CommonComponents');
+const GHService = require('../../networkService/GithubServices')
 const Platform = require('Platform');
 
 const {
@@ -19,6 +19,8 @@ const {
 } = React;
 
 const WEBVIEWREF = 'webview';
+
+// 用户登陆状态的onboard状态组件页面
 
 const OnboardComponent = React.createClass({
   propTypes: {
@@ -99,7 +101,7 @@ const OnboardComponent = React.createClass({
         <View style={[styles.container, {top: top}]}>
           <Image
             style={styles.welcomeImage}
-            source={require('../AppIcons/ios/iTunesArtwork.png')}/>
+            source={require('../../AppIcons/ios/iTunesArtwork.png')}/>
           <View style={styles.loginContainer}>
             <TextInput
               autoCapitalize={'none'}

@@ -1,13 +1,13 @@
 const React = require('react-native');
-const GHService = require('../networkService/GithubServices');
-const CommonComponents = require('../commonComponents/CommonComponents');
+const GHService = require('../../networkService/GithubServices');
+const CommonComponents = require('../../commonComponents/CommonComponents');
 const ScrollableTabView = require('react-native-scrollable-tab-view');
 const Icon = require('react-native-vector-icons/Ionicons');
-const Colors = require('../commonComponents/Colors');
-const DefaultTabBar = require('./DefaultTabBar');
-const GHRefreshListView = require('./GHRefreshListView');
-const RepoCell = require('./repo/RepoCell');
-const UserCell = require('./user/UserCell');
+const Colors = require('../../commonComponents/Colors');
+const DefaultTabBar = require('../DefaultTabBar');
+const GHRefreshListView = require('../GHRefreshListView');
+const RepoCell = require('../repo/RepoCell');
+const UserCell = require('../user/UserCell');
 const Platform = require('Platform');
 
 const {
@@ -24,6 +24,7 @@ const {
 
  const ICON_SIZE = 18;
 
+// Org 组织用户 页面： reps & members 模块；
 const OrgComponent = React.createClass({
   PropTypes: {
     org: React.PropTypes.object,

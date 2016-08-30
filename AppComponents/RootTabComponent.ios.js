@@ -8,7 +8,8 @@ const {
 
 const TABBABIDS = ['feed', 'watching', 'trend', 'personal','juhenews'];
 
-const RootTabComponent = React.createClass({
+// 此组件针对ios平台：root tab导航的组件
+const RootTabComponentIOS = React.createClass({
   getInitialState: function() {
     return {
       selectedTab: TABBABIDS[0],
@@ -86,4 +87,4 @@ const RootTabComponent = React.createClass({
   },
 });
 
-module.exports = RootTabComponent;
+module.exports = RootTabComponentIOS;

@@ -1,6 +1,7 @@
 const  React = require('react-native');
 const { processColor } = React;
 
+// app 风格样式颜色值统一
 const colors = {
 	lineGray: '#F0F0F0',
 	green: '#80BD01',

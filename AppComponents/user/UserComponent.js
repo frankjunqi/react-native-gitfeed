@@ -4,7 +4,7 @@ const ScrollableTabView = require('react-native-scrollable-tab-view');
 const Icon = require('react-native-vector-icons/Ionicons');
 const Colors = require('../../commonComponents/Colors');
 const RepoCell = require('../repo/RepoCell');
-const DXRNUtils = require('../../commonComponents/DXRNUtils');
+const DXRNUtils = require('../../iosComponents/DXRNUtils');
 const Platform = require('Platform');
 
 const {

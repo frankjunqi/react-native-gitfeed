@@ -11,28 +11,6 @@ var {
   Animated,
 } = React;
 
-var styles = StyleSheet.create({
-  tab: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  tabItem: {
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  tabs: {
-    height: 49,
-    flexDirection: 'row',
-    paddingTop: 5,
-    borderTopWidth: 0.5,
-    borderTopColor: Colors.backGray,
-  },
-  icon: {
-
-  },
-});
-
 var TabBarAndroid = React.createClass({
   selectedTabIcons: [],
   unselectedTabIcons: [],
@@ -99,6 +77,28 @@ var TabBarAndroid = React.createClass({
         </View>
       </View>
     );
+  },
+});
+
+var styles = StyleSheet.create({
+  tab: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  tabItem: {
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  tabs: {
+    height: 49,
+    flexDirection: 'row',
+    paddingTop: 5,
+    borderTopWidth: 0.5,
+    borderTopColor: Colors.backGray,
+  },
+  icon: {
+
   },
 });
 

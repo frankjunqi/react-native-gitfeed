@@ -4,7 +4,7 @@ const CommonComponents = require('../../commonComponents/CommonComponents');
 const Colors = require('../../commonComponents/Colors');
 const GHRefreshListView = require('../GHRefreshListView');
 const ExploreCell = require('../explore/ExploreCell');
-const DXRNUtils = require('../../commonComponents/DXRNUtils');
+const DXRNUtils = require('../../iosComponents/DXRNUtils');
 const Platform = require('Platform');
 
 const {

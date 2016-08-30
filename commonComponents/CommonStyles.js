@@ -5,6 +5,7 @@ const {
   StyleSheet,
 } = React;
 
+// app 整体风格样式统一
 const commonStyles = StyleSheet.create({
   container: {
     flex: 1,

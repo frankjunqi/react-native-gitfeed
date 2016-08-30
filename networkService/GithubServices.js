@@ -1,8 +1,7 @@
 const config = require('./GHConfig');
 const {EventEmitter} = require('events');
 const React = require('react-native');
-const DXUtils = require('../commonComponents/DXRNUtils');
-const MockFeedJSON = require('./mockFeed');
+const DXUtils = require('../iosComponents/DXRNUtils');
 const base64 = require('base-64');
 
 const {
