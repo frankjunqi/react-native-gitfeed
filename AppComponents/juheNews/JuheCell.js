@@ -22,7 +22,7 @@ const JuheCell = React.createClass({
   cellAction(){
     let juheCellEvent = this.props.juheCellEvent;
     const blog = {
-       html: "http://facebook.github.io/react-native/docs/navigator.html#configurescene",
+       html: juheCellEvent.url,
        title: juheCellEvent.title
      }
      return this.props.navigator.push(
